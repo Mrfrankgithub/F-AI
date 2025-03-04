@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F|AI</title>
+    <link rel="shortcut icon" href="./img/future3.jpg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .navbar .nav-link {
+            color: var(--text-color);
+        }
+
+        .navbar .nav-link.active,
+        .navbar .nav-link:hover {
+            background-color: var(--base-variant);
+            color: var(--text-color);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0" style="background-color: var(--accent-color)">
+        <div class="container navbar headerbck">
+            <!-- logo -->
+            <a class="navbar-brand fw-bold fs-4 namenav" style="color: var(--text-color)" href="#">F-AI</a>
+
+            <!-- toggler btn -->
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="" style="color: var(--text-color); font-size: 25px"><i class="fa-solid fa-bars"></i></span>
+            </button>
+
+            <!-- side bar -->
+            <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel" style="background-color: var(--base-color)">
+                <!-- side bar header -->
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close" style="color: var(--text-color)"></button>
+                </div>
+
+                <!-- side bar body -->
+                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link fw-bold" href="#">Home</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link fw-bold" href="#">Company</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link fw-bold" href="#">Api</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link fw-bold" href="#">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- Shopping Cart -->
+                    <button id="theme-switch">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path
+                                d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path
+                                d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <video autoplay loop muted plays-inline class="back">
+            <source src="img/love.mp4" type="video/mp4" />
+        </video>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="text-center col-md-12">
+                    <h1 class="conh">Unleash Creativity with F-AI</h1>
+                    <h4 class="pb-2 text-light">
+                        Your AI Image Generator with <br />
+                        Fast & High-Quality AI Image Generation.
+                    </h4>
+                    <button class="btn btn-outline-light px-4 mt-5">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid" style="
+        background-color: var(--base-color);
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin-top: -100px;
+      ">
+        <h2 class="hero text-center">
+            🖌️ Text to Image <i class="fa-solid fa-image"></i> Generator
+        </h2>
+        <input type="text" id="prompt" class="form-control mt-3 inpup" placeholder="Enter your prompt" />
+        <!-- <button  class="mt-3 bobutton">
+           
+        </button> -->
+        <!-- From Uiverse.io by gharsh11032000 -->
+        <button onclick="generateImage()" class="animated-button mt-3">
+            <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                </path>
+            </svg>
+            <span class="text"> 🎨 Generate Img</span>
+            <span class="circle"></span>
+            <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z">
+                </path>
+            </svg>
+        </button>
+
+        <div id="image-container">
+            <img id="generated-image" class="img-fluid mt-3" alt="Generated Image" />
+            <a id="download-link" class="btn btn-success mt-3" download="generated-image.png">⬇️ Download</a>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="text-center pb-3">
+            <h2 class="title font-42 line-bottom-double-line-centered">
+                Why Choose F-AI
+            </h2>
+            <p>
+                Transform your ideas into high-quality AI-generated art with speed,
+                precision, and creativity.
+            </p>
+        </div>
+
+        <div class="row">
+            <!-- Feature 1 -->
+            <div class="col-md-4">
+                <div class="icon-box text-center">
+                    <div class="icon icon-gray icon-bordered bg-hover-theme-colored2 icon-circled icon-xl">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h4 class="icon-box-title text-uppercase">
+                        <a class="box-title" href="#">Advanced AI Engine</a>
+                    </h4>
+                    <p>
+                        Leverage cutting-edge AI algorithms to create stunning and
+                        lifelike images from text prompts.
+                    </p>
+                    <a class="btn btn-default btn-theme-colored2 btn-sm mt-3" href="#">Learn More</a>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-md-4">
+                <div class="icon-box text-center">
+                    <div class="icon icon-gray icon-bordered bg-hover-theme-colored icon-circled icon-xl">
+                        <i class="fa-solid fa-magic-wand-sparkles"></i>
+                    </div>
+                    <h4 class="icon-box-title text-uppercase">
+                        <a class="box-title" href="#">Instant Creativity</a>
+                    </h4>
+                    <p>
+                        Generate high-quality images in seconds, whether for artwork,
+                        business, or personal projects.
+                    </p>
+                    <a class="btn btn-default btn-theme-colored2 btn-sm mt-3" href="#">Explore Now</a>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-md-4">
+                <div class="icon-box text-center">
+                    <div class="icon icon-gray icon-bordered bg-hover-theme-colored2 icon-circled icon-xl">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h4 class="icon-box-title text-uppercase">
+                        <a class="box-title" href="#">User-Friendly Interface</a>
+                    </h4>
+                    <p>
+                        Enjoy a seamless and intuitive experience, perfect for both
+                        beginners and professionals.
+                    </p>
+                    <a class="btn btn-default btn-theme-colored2 btn-sm mt-3" href="#">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="gallary" data-aos="fade-up" data-aos-duration="3000">
+        <div class="section__container gallary__container">
+            <div class="image__gallary">
+                <div class="gallary__col">
+                    <img style="width: 100%; display: block" src="./img/catlogo.jpg" alt="gallary" />
+                </div>
+                <div class="gallary__col">
+                    <img style="width: 100%; display: block" src="./img/mandog.jpg" alt="gallary" />
+                    <img style="width: 100%; display: block" src="./img/wed1.jpg" alt="gallary" />
+                </div>
+            </div>
+            <div class="gallary__content">
+                <div>
+                    <h2 class="section__title">AI-Powered Creativity</h2>
+                    <p class="section__subtitle">
+                        Generate stunning images with cutting-edge artificial
+                        intelligence—effortless, fast, and innovative. Rated 4.9/5 stars.
+                    </p>
+                    <button class="btnn">Try It Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <!-- Popular Products Section -->
+        <h2 class="mb-4 bold text-center">API SUBSCRIPTION PLAN</h2>
+        <div class="row g-4">
+            <!-- Example Product Card -->
+            <div class=" col-lg-3">
+                <div class="product-card position-relative">
+
+                    <div class="plan-header">
+                        WEEKLY PLAN - 9$
+                    </div>
+                    <div class="plan-body">
+                        <p><span><i class="fa-solid fa-check" style="color: rgb(45, 235, 45);"></i> Daily Img
+                                Request</span> <span>200</span></p>
+                        <p><span><i class="fa-solid fa-check" style="color: rgb(45, 235, 45);"></i> Img Generating
+                                speed</span> <span>10secs</span></p>
+                        <p><span><i class="fa-solid fa-check" style="color: rgb(45, 235, 45);"></i> Monthly
+                                Request</span> <span>6000</span></p>
+                    </div>
+                    <div class="plan-footer">
+                        <button class="btn btn-default btn-theme-colored2 btn-sm mt-3">Purchase Now</button>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class=" col-lg-3">
+                <div class="product-card position-relative">
+
+                    <div class="plan-header">
+                        MONTHLY PLAN - 15$
+                    </div>
+                    <div class="plan-body">
+                        <p><span><i class="fa-solid fa-check" style="color: rgb(45, 235, 45);"></i> Daily Img
+                                Request</span> <span>350</span></p>
+                        <p><span><i class="fa-solid fa-check" style="color: rgb(45, 235, 45);"></i> Img Generating
+                                speed</span> <span>7secs</span></p>
+                        <p><span><i class="fa-solid fa-check" style="color: rgb(45, 235, 45);"></i> Monthly
+                                Request</span> <span>10,500</span></p>
+                    </div>
+                    <div class="plan-footer">
+                        <button class="btn btn-default btn-theme-colored2 btn-sm mt-3">Purchase Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-lg-3">
+                <div class="product-card position-relative">
+                    <div class="plan-header">
+                        MONTHLY PLAN - 50$
+                    </div>
+                    <div class="plan-body">
+                        <p><span><i class="fa-solid fa-check" style="color: rgb(45, 235, 45);"></i> Daily Img
+                                Request</span> <span>700</span></p>
+                        <p><span><i class="fa-solid fa-check" style="color: rgb(45, 235, 45);"></i> Img Generating
+                                speed</span> <span>7secs</span></p>
+                        <p><span><i class="fa-solid fa-check" style="color: rgb(45, 235, 45);"></i> Monthly
+                                Request </span> <span> 21,000</span> </p>
+                    </div>
+                    <div class="plan-footer">
+                        <button class="btn btn-default btn-theme-colored2 btn-sm mt-3">Purchase Now</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class=" col-lg-3">
+                <div class="product-card position-relative">
+                    <div class="plan-header">
+                        ANNUAL PLAN - 200$
+                    </div>
+                    <div class="plan-body">
+                        <p><span><i class="fa-solid fa-check" style="color: rgb(45, 235, 45);"></i> Daily
+                                Request</span> <span>Unlimited</span></p>
+                        <p><span><i class="fa-solid fa-check" style="color: rgb(45, 235, 45);"></i> Img Generating
+                                speed</span> <span>7secs</span></p>
+                        <p><span><i class="fa-solid fa-check" style="color: rgb(45, 235, 45);"></i> Monthly
+                                Request</span> <span>Unlimited</span></p>
+                    </div>
+                    <div class="plan-footer">
+                        <button class="btn btn-default btn-theme-colored2 btn-sm mt-3">Purchase Now</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-md-3">
+                    <div class="footer-logo">F-AI</div>
+                    <p>
+                        Transform your ideas into stunning visuals with AI-powered
+                        creativity. Experience the future of design, one image at a time.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">COMPANY</a></li>
+                        <li><a href="#">API DOCUMENTATION</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 AI Street, Brewtown</p>
+                    <p><i class="fas fa-phone"></i> +123 456 7890</p>
+                    <p><i class="fas fa-envelope"></i> info@FAI.com</p>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-md-4">
+                    <h5>Apps</h5>
+                    <p>Get the latest F-ai Apps.</p>
+
+                    <img style="width: 150px" src="./img/appstore.png" alt="" />
+                    <img style="width: 150px" src="./img/playstore.png" alt="" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center mt-4">
+                    <!-- Social Icons -->
+                    <div class="social-icons">
+                        <a href="www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                        <a href="www.twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="www.instagram.com"><i class="fab fa-instagram"></i></a>
+                        <a href="www.youtube.com"><i class="fab fa-youtube"></i></a>
+                    </div>
+                    <p class="copyright">© 2024 F-AI. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        let darkmode = localStorage.getItem("darkmode");
+        const themeSwitch = document.getElementById("theme-switch");
+
+        const enableDarkmode = () => {
+            document.body.classList.add("darkmode");
+            localStorage.setItem("darkmode", "active");
+        };
+
+        const disableDarkmode = () => {
+            document.body.classList.remove("darkmode");
+            localStorage.setItem("darkmode", null);
+        };
+
+        if (darkmode === "active") enableDarkmode();
+
+        themeSwitch.addEventListener("click", () => {
+            darkmode = localStorage.getItem("darkmode");
+            darkmode !== "active" ? enableDarkmode() : disableDarkmode();
+        });
+
+        async function generateImage() {
+            const prompt = document.getElementById("prompt").value;
+
+            const response = await fetch("http://localhost:3000/generate-image", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ prompt }),
+            });
+
+            const data = await response.json();
+            if (data.imageUrl) {
+                document.getElementById("generated-image").src = data.imageUrl;
+            } else {
+                // alert("Failed to generate image");
+                
+                Swal.fire({
+                    text: "Failed to generate image!",
+                    icon: "warning",
+                    showConfirmButton: true
+                });
+              
+         
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
