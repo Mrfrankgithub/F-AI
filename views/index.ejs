@@ -21,9 +21,25 @@
             border-radius: 5px;
         }
     </style>
+    <!-- Chatra {literal} -->
+<script>
+    (function(d, w, c) {
+        w.ChatraID = 'fzW2rhb2GNmsyRThi';
+        var s = d.createElement('script');
+        w[c] = w[c] || function() {
+            (w[c].q = w[c].q || []).push(arguments);
+        };
+        s.async = true;
+        s.src = 'https://call.chatra.io/chatra.js';
+        if (d.head) d.head.appendChild(s);
+    })(document, window, 'Chatra');
+</script>
+<!-- /Chatra {/literal} -->
+    
 </head>
 
 <body>
+    
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0" style="background-color: var(--accent-color)">
         <div class="container navbar headerbck">
             <!-- logo -->
@@ -372,10 +388,11 @@
         </div>
     </footer>
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         let darkmode = localStorage.getItem("darkmode");
@@ -400,30 +417,36 @@
 
         async function generateImage() {
             const prompt = document.getElementById("prompt").value;
+            if (!prompt) {
+                Swal.fire("Error", "Please enter a prompt", "error");
+                return;
+            }
 
-            const response = await fetch("http://localhost:3000/generate-image", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ prompt }),
-            });
-
-            const data = await response.json();
-            if (data.imageUrl) {
-                document.getElementById("generated-image").src = data.imageUrl;
-            } else {
-                // alert("Failed to generate image");
-                
-                Swal.fire({
-                    text: "Failed to generate image!",
-                    icon: "warning",
-                    showConfirmButton: true
+            try {
+                const response = await fetch("http://localhost:3000/generate-image", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ prompt }),
                 });
-              
-         
 
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || "Unknown error");
+                }
+
+                const imgElement = document.getElementById("generated-image");
+                const downloadLink = document.getElementById("download-link");
+
+                imgElement.src = data.imageUrl;
+                downloadLink.href = data.imageUrl;
+                downloadLink.style.display = "inline-block";
+
+            } catch (error) {
+                Swal.fire("Error", error.message, "error");
+                console.error("Generation Error:", error);
             }
         }
-
     </script>
 </body>
 
